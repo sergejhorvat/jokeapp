@@ -10,8 +10,13 @@ public class JokeServiceImpl implements JokeService {
     // so class will be created once and reused. So it's more efficient
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    public JokeServiceImpl() {
+    // commented to be refactored
+/*    public JokeServiceImpl() {
         this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+    }*/
+
+    public JokeServiceImpl(ChuckNorrisQuotes chuckNorrisQuotes) { // needs configuration
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
 
     @Override
